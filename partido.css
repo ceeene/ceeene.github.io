@@ -2,12 +2,23 @@
     box-sizing: border-box;
 }
 
+h1{
+    color: black;
+    font-style:italic;
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size:12px;
+}
+
 header{
     float: left;
     width: 100%;
-    height: 200px;
+    height: 300px;
     text-align: center;
-    background-color: black;
+    background-color: rgb(255, 94, 0);
 
     
 }
@@ -15,42 +26,47 @@ header{
 nav{
     float:left;
     width: 100%;
-    height: 50px;
+    height: 80px;
     text-align: center;
-    background-color: blue;
+    background-color: rgb(153, 0, 255);
     margin-top: 10px;
 }
 
 main{
     float: left;
     width: 100%;
-    height: 800px;
-    background-color: aqua;
+    height: 1000px;
+    background-color: blueviolet;
     margin-top: 10px;
 }
 
+
+
 article{
     float:left;
-    width: 50%;
-    height: 250px;
-    background-color: green;
+    width: 41%;
+    height: 400px;
+    background-color: orangered;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
 }
 
 aside{
     float:left;
-    width: 15%;
+    width: 45%;
     height: 400px;
-    background-color: blueviolet;
-    margin: 10px;
+    background-color: orangered;
+    text-align: center;
+    margin: 20px;
 }
+
+
 
 footer{
     float:left;
     width: 100%;
     height: 100px;
-    background-color: gold;
+    background-color: orangered;
     margin-top: 10px;
     text-align: center;
 }
