@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>Esta es la tercer pagina</h1>
+    <title>Nuestros candidatos</title>
+    <h1>Conoce a nuestros candidatos</h1>
 </head>
 <body>
+    <h1>Estas listo para un cambio verdadero?</h1>
+    <p>Tu ciudad te necesita</p>
+
+    <div class="carousel">
+        <button id="prevBtn" class="carousel-button">&lt;</button>
+        <img id="carouselImage" src="candidato5.jpg" alt="Imagen del carrusel">
+        <button id="nextBtn" class="carousel-button">&gt;</button>
+    </div>
+
+    <script>
+        
+        const images = ["candidato5.jpg", "candidato3.jpg", "candidato2.jpg"];
+        const carouselImage = document.getElementById("carouselImage");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+    
+        let currentIndex = 0;
+    
+        function updateImage() {
+            carouselImage.src = images[currentIndex];
+        }
+    
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage();
+        }
+    
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImage();
+        }
+    
+        prevBtn.addEventListener("click", prevImage);
+        nextBtn.addEventListener("click", nextImage);
+    
+        // Inicializa la imagen actual
+        updateImage();
+    </script>
+
     
 </body>
 </html>
