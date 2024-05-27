@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <script>
+        function validateAndSubmit(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var lastName = document.getElementById('lastName').value.trim();
+            var dni = document.getElementById('dni').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+
+            // Validaciones básicas
+            if (!name ||!lastName ||!dni ||!phone) {
+                showError("Todos los campos son obligatorios.");
+                return false;
+            }
+
+            // Longitud máxima para DNI y Teléfono
+            if (dni.length > 8 || phone.length > 15) {
+                showError("DNI y Teléfono exceden la longitud máxima permitida.");
+                return false;
+            }
+
+            // Expresión regular para el DNI (ajusta según el formato esperado)
+            var dniPattern = /^[0-9]{8}$/;
+            if (!dni.match(dniPattern)) {
+                showError("DNI inválido.");
+                return false;
+            }
+
+            // Expresión regular para el Teléfono (ajusta según el formato esperado)
+            var phonePattern = /^\d{10}$/; // Ejemplo para números de teléfono de 10 dígitos
+            if (!phone.match(phonePattern)) {
+                showError("Número de teléfono inválido.");
+                return false;
+            }
+
+            // Mostrar mensaje de éxito
+            var successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+
+            // Resetear el formulario
+            document.getElementById('contactForm').reset();
+            return true;
+        }
+
+        function showError(message) {
+            var errorDiv = document.createElement('div');
+            errorDiv.style.color = 'red';
+            errorDiv.textContent = message;
+            document.body.appendChild(errorDiv);
+            setTimeout(() => document.body.removeChild(errorDiv), 5000); // Eliminar después de 5 segundos
+        }
+    </script>
+</head>
+<body>
+    <form id="contactForm" onsubmit="event.preventDefault(); validateAndSubmit(event);">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="lastName">Apellido:</label><br>
+        <input type="text" id="lastName" name="lastName"><br>
+        <label for="dni">DNI:</label><br>
+        <input type="text" id="dni" name="dni"><br>
+        <label for="phone">Teléfono:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Resetear</button>
+    </form>
+    <div id="success-message" style="display: none;">Gracias por querer sumarte al cambio!.Pronto nos comunicaremos con vos</div>
+</body>
+</html>
