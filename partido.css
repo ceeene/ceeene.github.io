@@ -97,3 +97,29 @@ footer{
     margin-top: 10px;
     text-align: center;
 }
+.carousel-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Asegura que el carrusel y el texto estén alineados verticalmente */
+    width: 100%; /* Ajusta esto según sea necesario */
+    padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+
+.carousel {
+    max-width: 50%;
+}
+
+.text-area {
+    flex-grow: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+    .carousel {
+         width: 100%;
+     }
+
+
+
+
