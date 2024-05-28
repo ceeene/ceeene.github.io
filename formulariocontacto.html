@@ -46,24 +46,41 @@
                 return false;
             }
 
-            // Mostrar mensaje de éxito
+            // Mostrar mensaje de éxito y datos ingresados
             var successMessage = document.getElementById('success-message');
             successMessage.style.display = 'block';
+
+            // Crear un div para mostrar los datos ingresados
+
+            var userDataDiv = document.createElement('div');
+            userDataDiv.innerHTML = `
+                <p>Nombre: ${name}</p>
+                <p>Apellido: ${lastName}</p>
+                <p>DNI: ${dni}</p>
+                <p>Teléfono: ${phone}</p>
+            `;
+            userDataDiv.style.color = 'black';
+            successMessage.parentNode.insertBefore(userDataDiv, successMessage.nextSibling);
+
             setTimeout(() => {
                 successMessage.style.display = 'none';
+                userDataDiv.remove(); // Eliminar el div de datos ingresados después de 5 segundos
             }, 5000);
-
+            
+            
             // Resetear el formulario
             document.getElementById('contactForm').reset();
             return true;
         }
 
         function showError(message) {
-            var errorDiv = document.createElement('div');
-            errorDiv.style.color = 'red';
-            errorDiv.textContent = message;
-            document.body.appendChild(errorDiv);
-            setTimeout(() => document.body.removeChild(errorDiv), 5000); // Eliminar después de 5 segundos
+            var errorMessage = document.getElementById('success-message');
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            setTimeout(() => {
+                errorMessage.style.color = 'red';
+                errorMessage.style.display = 'none';
+            }, 5000);
         }
     </script>
 </head>
