@@ -4,13 +4,38 @@
 
 /*mouse hover link*/
 a:hover{
-    color:black;
+    color: white;
 }
 
+.navegacion {
+    ul {
+        list-style-type: style;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+    }
 
+    li {
+        margin: 2px 0; 
+    }
+
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: violet;
+    }
+    
+}
 
 body{
-    background-color: black;
+    background-color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -69,7 +94,7 @@ main{
 
 
 
-article{
+.contenedor{
     float:left;
     width: 41%;
     height: 400px;
@@ -105,6 +130,12 @@ footer{
     padding: 20px; /* Espacio alrededor del contenedor */
 }
 
+.carousel-image {
+    width: 450px; 
+    height: auto; 
+    margin-top: 35px;
+}
+
 
 .carousel {
     max-width: 50%;
@@ -115,10 +146,35 @@ footer{
     padding: 20px;
     border: 1px solid #ccc;
 }
-@media (max-width: 768px) {
-    .carousel {
-         width: 100%;
-     }
+/*@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }*/
+
+   .container {
+    float:left;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(153, 0, 255);
+    margin-top: 10px;
+    margin-left: 250px;
+    font-size: 100px;
+    
+   
+    }
+    .container2 {
+        float:left;
+        width: 50%; /*ancho*/
+        height: 400px;
+        text-align: center;
+        background-color: rgb(153, 0, 255);
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 200px;
+       
+        }
+}
 
 
 

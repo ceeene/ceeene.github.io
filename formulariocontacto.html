@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href = "partido.css">
+    <style>
+        .container2  {
+        font-size: 14px;
+        margin-left: 350px; 
+    }
+    </style>
+    
     <script>
         function validateAndSubmit(e) {
             e.preventDefault();
@@ -60,6 +68,21 @@
     </script>
 </head>
 <body>
+    <header>
+        <a href="index.html">Volver a la página principal</a>
+        <img src="logo2.png" width="200px" height="200px" alt="Logo Partido Sanluiseño" style="float: left;">
+        
+        <h1>Sumate a nuestro equipo</h1>
+        <div class="navegacion">
+        <ul>
+            <li><a href="formulariocontacto.html">Sumate!</a></li>
+            <li><a href="candidatos.html">Conoce a nuestros candidatos</a></li>
+            <li><a href="historia.html">Nuestra Historia</a></li>
+            </ul>
+    </div>
+        
+        </header>
+        <div class="container2">
     <form id="contactForm" onsubmit="event.preventDefault(); validateAndSubmit(event);">
         <label for="name">Nombre:</label><br>
         <input type="text" id="name" name="name"><br>
@@ -73,5 +96,16 @@
         <button type="reset">Resetear</button>
     </form>
     <div id="success-message" style="display: none;">Gracias por querer sumarte al cambio!.Pronto nos comunicaremos con vos</div>
+</div>
+    <footer>
+        <ul>
+            <li>Telefono: 2664223344</li>
+            <li>Correo Electronico: partidosanluiseño@psl.com</li>
+            <li>Oficina central: Chacabuco 1014. San Luis</li>
+            <li>Instagram: @partidosanluiseño</li>
+            <li>X: @partidosanluiseño</li>
+        </ul>
+    </footer>
+
 </body>
 </html>
