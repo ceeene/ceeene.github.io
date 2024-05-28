@@ -8,8 +8,16 @@
     <style>
         .container2  {
         font-size: 14px;
-        margin-left: 350px; 
+        margin-top: 10px;
+        
     }
+    .flex-container {
+  display: flex;
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  
+}
     </style>
     
     <script>
@@ -20,37 +28,37 @@
             var dni = document.getElementById('dni').value.trim();
             var phone = document.getElementById('phone').value.trim();
 
-            // Validaciones básicas
+            // Validaciones básicas.ok
             if (!name ||!lastName ||!dni ||!phone) {
                 showError("Todos los campos son obligatorios.");
                 return false;
             }
 
-            // Longitud máxima para DNI y Teléfono
+            // Longitud máxima para DNI y Teléfono.Revisar
             if (dni.length > 8 || phone.length > 15) {
                 showError("DNI y Teléfono exceden la longitud máxima permitida.");
                 return false;
             }
 
-            // Expresión regular para el DNI (ajusta según el formato esperado)
+            // Expresión regular para el DNI.ok
             var dniPattern = /^[0-9]{8}$/;
             if (!dni.match(dniPattern)) {
                 showError("DNI inválido.");
                 return false;
             }
 
-            // Expresión regular para el Teléfono (ajusta según el formato esperado)
-            var phonePattern = /^\d{10}$/; // Ejemplo para números de teléfono de 10 dígitos
+            // Expresión regular para el Teléfono.ok
+            var phonePattern = /^\d{10}$/; // Solo acepta numeros de hasta 10 digitos
             if (!phone.match(phonePattern)) {
                 showError("Número de teléfono inválido.");
                 return false;
             }
 
-            // Mostrar mensaje de éxito y datos ingresados
+            // Mostrar mensaje de éxito y datos ingresados.ok
             var successMessage = document.getElementById('success-message');
             successMessage.style.display = 'block';
 
-            // Crear un div para mostrar los datos ingresados
+            // Crear un div para mostrar los datos ingresados.ok
 
             var userDataDiv = document.createElement('div');
             userDataDiv.innerHTML = `
@@ -64,11 +72,11 @@
 
             setTimeout(() => {
                 successMessage.style.display = 'none';
-                userDataDiv.remove(); // Eliminar el div de datos ingresados después de 5 segundos
+                userDataDiv.remove(); // Elimina el div de datos ingresados despues de x tiempo.ok
             }, 5000);
             
             
-            // Resetear el formulario
+            // Resetear el formulario.ok
             document.getElementById('contactForm').reset();
             return true;
         }
@@ -99,6 +107,7 @@
     </div>
         
         </header>
+        <div class="flex-container">
         <div class="container2">
     <form id="contactForm" onsubmit="event.preventDefault(); validateAndSubmit(event);">
         <label for="name">Nombre:</label><br>
@@ -114,6 +123,12 @@
     </form>
     <div id="success-message" style="display: none;">Gracias por querer sumarte al cambio!.Pronto nos comunicaremos con vos</div>
 </div>
+
+<div class="contenedor">
+    <img src="afiliados.jpg"  width="350px" height="350px" alt="Afiliados" style="float: center; margin-top: 15px;">
+</div>
+        </div>
+
     <footer>
         <ul>
             <li>Telefono: 2664223344</li>

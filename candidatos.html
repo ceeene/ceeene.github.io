@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros candidatos</title>
     <link rel="stylesheet" href = "partido.css">
+    <style>
+          .flex-container {
+  display: flex;
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  
+}
+
+
+    </style>
       
     <header>
     
@@ -20,18 +31,15 @@
             
         </ul>
     </div>
-        
-        </header>
+     </header>
 
-       
-</head>
+    </head>
 <body>
-    
+    <div class="flex-container"> 
     <div class="listaCandidatos">
         <ul>
-            <h2>Candidato 1</h2>
-            <li>Nombre: Juan Carlos</li>
-            <li>Apellido: Pérez</li>
+            <h2>Juan Carlos Perez</h2>
+            
             <li>Estudios: Licenciatura en Ciencias Políticas por la Universidad Nacional Mayor de San Marcos (UNMSM).</li>
             <li>Experiencia Laboral: Ex miembro del Congreso Nacional como Diputado durante dos legislaturas. Anteriormente,<br>
                  trabajó como asesor político para el Ministerio de Relaciones Exteriores.</li>
@@ -40,9 +48,8 @@
         </div>  
         <div class="listaCandidatos">    
         <ul>
-            <h2>Candidato 2</h2>
-            <li>Nombre: María Gabriela</li>
-            <li>Apellido: Rodriguez</li>
+            <h2>Maria Gabriela Rodriguez</h2>
+            
             <li>Estudios: Maestría en Administración Pública por la Pontificia Universidad Católica del Perú (PUCP). Licenciada en Derecho por la Universidad de Lima.</li>
             <li>Experiencia Laboral: Dirección de Asuntos Legislativos en el Ministerio de Economía y Finanzas. Antes de eso, ejerció como abogada especializada en derecho administrativo.</li>
             
@@ -51,9 +58,8 @@
         </div>
         <div class="listaCandidatos">
             <ul>
-                <h2>Candidato 3</h2>
-                <li>Nombre: Pedro Alejandro</li>
-                <li>Apellido: Gonzalez</li>
+                <h2>Pedro Alejandro Gonzalez</h2>
+                
                 <li>Estudios: Ingeniero Civil por la Universidad Nacional de Ingeniería (UNI). Especialización en Gestión Ambiental por la Universidad Ricardo Palma.</li>
                 <li>Experiencia Laboral: Director de Proyectos Ambientales en la empresa privada. Ha sido consultor ambiental para proyectos de inversión nacional e internacional.<br>
                      Participante activo en organizaciones de conservación de la naturaleza.</li>
@@ -66,7 +72,7 @@
         <button id="nextBtn" class="carousel-button">&gt;</button>
     </div>
 
-
+    </div>
     <script>
         
         const images = ["candidato5.jpg", "candidato3.jpg", "candidato2.jpg"];
@@ -93,7 +99,7 @@
         prevBtn.addEventListener("click", prevImage);
         nextBtn.addEventListener("click", nextImage);
     
-        // Inicializa la imagen actual
+        
         updateImage();
     
     </script>

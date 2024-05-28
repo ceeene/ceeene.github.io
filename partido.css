@@ -1,8 +1,5 @@
-/**, * ::after, *::before {
-    box-sizing: border-box;
-}-->*/
 
-/*mouse hover link*/
+/*mouse hover link. accion del mouse*/
 a:hover{
     color: white;
 }
@@ -95,7 +92,7 @@ main{
 
 
 .contenedor{
-    float:left;
+    
     width: 41%;
     height: 400px;
     background-color: orangered;
@@ -105,14 +102,14 @@ main{
 }
 
 .listaCandidatos{
-    float:left;
-    height: 150px;
-    text-align: center;
+    
+    height: 400px;
+    text-align: left;
     background-color: rgb(153, 0, 255);
     margin-top: 10px;
-    font-size: 10px; 
+    font-size: 15px; 
     width: 50%;
-    margin-left: 10px;
+    margin-left: 2px;
 }
 
 
@@ -139,9 +136,9 @@ footer{
 .carousel-text-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Asegura que el carrusel y el texto estén alineados verticalmente */
-    width: 100%; /* Ajusta esto según sea necesario */
-    padding: 20px; /* Espacio alrededor del contenedor */
+    align-items: center; 
+    width: 100%; 
+    padding: 20px; /* espacio alrededor del contenedor */
 }
 
 .carousel-image {
@@ -160,10 +157,7 @@ footer{
     padding: 20px;
     border: 1px solid #ccc;
 }
-/*@media screen and (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }*/
+
 
    .container {
     float:left;
@@ -178,7 +172,7 @@ footer{
    
     }
     .container2 {
-        float:left;
+        
         width: 50%; /*ancho*/
         height: 400px;
         text-align: center;
